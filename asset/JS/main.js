@@ -182,19 +182,33 @@ console.log(risultato);
 
 // FILTER:
 
-function example(array, a, b) {
-    if (a < b) {
-        const x = array.filter(function (el) {
-            if (el >= a && el <= b) {
-                return true;
-            };
-            return false;
-        });
-        console.log(x);
-    };
-};
-
+// function example(array, a, b) {
+//     if (a < b) {
+//         const x = array.filter(function (el) {
+//             if (el >= a && el <= b) {
+//                 return true;
+//             };
+//             return false;
+//         });
+//         console.log(x);
+//     };
+// };
 const matrice = [1, 'a', 3, 'b', 'd', 'c', 'f', 8, 9, 10];
 let min = 4;
 let max = 9;
+
+let example = (array, a, b) => {
+
+    const x = array.filter(function (el, i) {
+        if (i >= a && i <= b) {
+            return true;
+        };
+        return false;
+
+    });
+
+
+    console.log(x);
+};
+
 example(matrice, min, max);
