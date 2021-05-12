@@ -152,8 +152,8 @@ let example = (array, a, b) => {
 };
 
 const matrice = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let a = 4;
-let b = 9;
+let min = 4;
+let max = 9;
 let risultato = example(matrice, a, b);
 console.log(risultato);
 */
@@ -172,15 +172,17 @@ let example = (array, a, b) => {
     };
 
 };
-const matrice = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let a = 4;
-let b = 9;
-let risultato = example(matrice, a, b);
+
+const matrice = [1, 'a', 3, 'b', 'd', 'c', 'f', 8, 9, 10];
+let min = 4;
+let max = 9;
+let risultato = example(matrice, min, max);
 console.log(risultato);
 */
 
 // FILTER:
-let example = (array, a, b) => {
+
+function example(array, a, b) {
     if (a < b) {
         const x = array.filter(function (el) {
             if (el >= a && el <= b) {
@@ -192,8 +194,7 @@ let example = (array, a, b) => {
     };
 };
 
-const matrice = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let a = 4;
-let b = 9;
-example(matrice, a, b);
-
+const matrice = [1, 'a', 3, 'b', 'd', 'c', 'f', 8, 9, 10];
+let min = 4;
+let max = 9;
+example(matrice, min, max);
