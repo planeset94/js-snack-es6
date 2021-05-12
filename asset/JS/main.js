@@ -162,7 +162,7 @@ console.log(risultato);
 let example = (array, a, b) => {
     if (a < b) {
         let list = [];
-        array.forEach((element, i, array) => {
+        array.forEach((element, i) => {
             if (i >= a && i <= b) {
                 list.push(array[i]);
             };
@@ -182,33 +182,22 @@ console.log(risultato);
 
 // FILTER:
 
-// function example(array, a, b) {
-//     if (a < b) {
-//         const x = array.filter(function (el) {
-//             if (el >= a && el <= b) {
-//                 return true;
-//             };
-//             return false;
-//         });
-//         console.log(x);
-//     };
-// };
+
 const matrice = [1, 'a', 3, 'b', 'd', 'c', 'f', 8, 9, 10];
 let min = 4;
 let max = 9;
 
-let example = (array, a, b) => {
+let filterFunction = (array, a, b) => {
 
     const x = array.filter(function (el, i) {
         if (i >= a && i <= b) {
             return true;
         };
         return false;
-
+        //oppure si può scriver così:  return (i >= a && i <= b);
     });
-
-
-    console.log(x);
+    return x;
 };
 
-example(matrice, min, max);
+let risultato = filterFunction(matrice, min, max);
+console.log(risultato);
